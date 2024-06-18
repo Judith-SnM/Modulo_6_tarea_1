@@ -20,7 +20,7 @@ app.use('/abracadabra/juego/:usuario', (req, res, next) => {
     if (usuarios.includes(usuario)) {
         next();
     } else {
-        res.sendFile(path.join(__dirname, 'assets', 'who.jpeg'));
+        res.sendFile(path.join(__dirname, 'assets', 'who.jpg'));
     }
 });
 
@@ -35,9 +35,9 @@ app.get('/abracadabra/conejo/:n', (req, res) => {
     const numeroAleatorio = Math.floor(Math.random() * 4) + 1;
 
     if (n === numeroAleatorio) {
-        res.sendFile(path.join(__dirname, 'assets', 'conejo.jpg'));
+        res.sendFile(path.join(__dirname, 'assets', 'conejito.jpg'));
     } else {
-        res.sendFile(path.join(__dirname, 'assets', 'voldemort.jpg'));
+        res.sendFile(path.join(__dirname, 'assets', 'Voldemort'));
     }
 });
 
